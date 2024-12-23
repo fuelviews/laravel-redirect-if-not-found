@@ -2,8 +2,6 @@
 
 namespace Fuelviews\AppRedirectIfNotFound;
 
-use Fuelviews\AppRedirectIfNotFound\Middleware\AppRedirectIfNotFoundMiddleware;
-use Illuminate\Routing\Router;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 

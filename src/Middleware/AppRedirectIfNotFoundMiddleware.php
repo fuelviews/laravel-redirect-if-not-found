@@ -13,7 +13,7 @@ class AppRedirectIfNotFoundMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (!$this->shouldApplyMiddleware() || $this->isExcludedRoute($request)) {
+        if (! $this->shouldApplyMiddleware() || $this->isExcludedRoute($request)) {
             return $next($request);
         }
 
