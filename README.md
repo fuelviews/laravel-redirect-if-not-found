@@ -15,13 +15,6 @@ You can install the package via composer:
 composer require fuelviews/app-redirect-if-not-found
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="app-redirect-if-not-found-migrations"
-php artisan migrate
-```
-
 You can publish the config file with:
 
 ```bash
@@ -32,20 +25,36 @@ This is the contents of the published config file:
 
 ```php
 return [
+    'fallback_route' => 'home',
 ];
+
 ```
 
-Optionally, you can publish the views using
+## Register Middleware
 
-```bash
-php artisan vendor:publish --tag="app-redirect-if-not-found-views"
-```
-
-## Usage
+### Laravel 11 - Register middleware in bootstrap/app.php
 
 ```php
-$redirectIfNotFound = new Fuelviews\RedirectIfNotFound();
-echo $redirectIfNotFound->echoPhrase('Hello, Fuelviews!');
+->withMiddleware(function (Middleware $middleware) {
+    $middleware->use([
+        \Fuelviews\AppRedirectIfNotFound\Middleware\AppRedirectIfNotFoundMiddleware::class,
+    ]);
+})
+```
+
+### Laravel 10 - Register middleware in app/Http/Kernel.php
+
+```php
+protected $middleware = [
+    \App\Http\Middleware\TrustProxies::class,
+    \Illuminate\Http\Middleware\HandleCors::class,
+    \App\Http\Middleware\PreventRequestsDuringMaintenance::class,
+    \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
+    \App\Http\Middleware\TrimStrings::class,
+    \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
+    \Illuminate\Session\Middleware\StartSession::class,
+    \App\Http\Middleware\RedirectIfNotFound::class,
+];
 ```
 
 ## Testing
@@ -68,7 +77,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [thejmitchener](https://github.com/fuelviews)
+- [Thejmitchener](https://github.com/fuelviews)
 - [All Contributors](../../contributors)
 
 ## License
