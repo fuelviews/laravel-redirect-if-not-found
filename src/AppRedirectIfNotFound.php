@@ -2,6 +2,4 @@
 
 namespace Fuelviews\AppRedirectIfNotFound;
 
-class AppRedirectIfNotFound
-{
-}
+class AppRedirectIfNotFound {}
