@@ -1,10 +1,9 @@
 {
-    "name": "fuelviews/app-redirect-if-not-found",
+    "name": "fuelviews/laravel-redirect-if-not-found",
     "description": "This is my package app-redirect-if-not-found",
     "keywords": [
         "Fuelviews",
-        "laravel",
-        "app-redirect-if-not-found"
+        "laravel"
     ],
     "homepage": "https://github.com/fuelviews/app-redirect-if-not-found",
     "license": "MIT",
