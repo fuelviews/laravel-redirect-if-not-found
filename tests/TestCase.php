@@ -1,8 +1,8 @@
 <?php
 
-namespace Fuelviews\AppRedirectIfNotFound\Tests;
+namespace Fuelviews\RedirectIfNotFound\Tests;
 
-use Fuelviews\AppRedirectIfNotFound\AppRedirectIfNotFoundServiceProvider;
+use Fuelviews\RedirectIfNotFound\RedirectIfNotFoundServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
 
@@ -13,14 +13,14 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Fuelviews\\AppRedirectIfNotFound\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'Fuelviews\\RedirectIfNotFound\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 
     protected function getPackageProviders($app)
     {
         return [
-            AppRedirectIfNotFoundServiceProvider::class,
+            RedirectIfNotFoundServiceProvider::class,
         ];
     }
 
