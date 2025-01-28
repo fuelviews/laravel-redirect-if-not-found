@@ -1,53 +1,44 @@
-# This is my package app-redirect-if-not-found
+# This is my package laravel-redirect-if-not-found
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/fuelviews/app-redirect-if-not-found.svg?style=flat-square)](https://packagist.org/packages/fuelviews/app-redirect-if-not-found)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/fuelviews/app-redirect-if-not-found/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/fuelviews/app-redirect-if-not-found/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/fuelviews/app-redirect-if-not-found/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/fuelviews/app-redirect-if-not-found/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/fuelviews/app-redirect-if-not-found.svg?style=flat-square)](https://packagist.org/packages/fuelviews/app-redirect-if-not-found)
-
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/fuelviews/laravel-redirect-if-not-found.svg?style=flat-square)](https://packagist.org/packages/fuelviews/laravel-redirect-if-not-found)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/fuelviews/laravel-redirect-if-not-found/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/fuelviews/laravel-redirect-if-not-found/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/fuelviews/laravel-redirect-if-not-found/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/fuelviews/laravel-redirect-if-not-found/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/fuelviews/laravel-redirect-if-not-found.svg?style=flat-square)](https://packagist.org/packages/fuelviews/laravel-redirect-if-not-found)
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require fuelviews/app-redirect-if-not-found
+composer require fuelviews/laravel-redirect-if-not-found
 ```
 
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag="app-redirect-if-not-found-config"
+php artisan vendor:publish --tag="redirect-if-not-found-config"
 ```
 
 This is the contents of the published config file:
 
 ```php
 return [
+    'enabled' => true,
     'fallback_route' => 'home',
+    'fallback_status_code' => 301,
+    'excluded_patterns' => [
+        'admin/*',
+        'dashboard/admin/*',
+        'livewire/*',
+        'api/*',
+        'glide/*',
+    ],
+    'environments' => [
+        'development',
+        'production',
+    ],
 ];
 
-```
-
-## Register Middleware
-
-### Laravel 11 - Register middleware in bootstrap/app.php
-
-```php
-->withMiddleware(function (Middleware $middleware) {
-    $middleware->use([
-        \Fuelviews\AppRedirectIfNotFound\Middleware\AppRedirectIfNotFoundMiddleware::class,
-    ]);
-})
-```
-
-### Laravel 10 - Register middleware in app/Http/Kernel.php
-
-```php
-protected $middleware = [
-    \App\Http\Middleware\RedirectIfNotFound::class,
-];
 ```
 
 ## Testing

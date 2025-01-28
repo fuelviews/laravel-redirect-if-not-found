@@ -29,13 +29,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Fuelviews\\AppRedirectIfNotFound\\": "src/",
-            "Fuelviews\\AppRedirectIfNotFound\\Database\\Factories\\": "database/factories/"
+            "Fuelviews\\RedirectIfNotFound\\": "src/",
+            "Fuelviews\\RedirectIfNotFound\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Fuelviews\\AppRedirectIfNotFound\\Tests\\": "tests/",
+            "Fuelviews\\RedirectIfNotFound\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
@@ -57,10 +57,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Fuelviews\\AppRedirectIfNotFound\\AppRedirectIfNotFoundServiceProvider"
+                "Fuelviews\\RedirectIfNotFound\\RedirectIfNotFoundServiceProvider"
             ],
             "aliases": {
-                "AppRedirectIfNotFound": "Fuelviews\\AppRedirectIfNotFound\\Facades\\AppRedirectIfNotFound"
+                "RedirectIfNotFound": "Fuelviews\\RedirectIfNotFound\\Facades\\RedirectIfNotFound"
             }
         }
     },
