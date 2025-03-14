@@ -2,6 +2,18 @@
 
 All notable changes to `laravel-redirect-if-not-found` will be documented in this file.
 
+## v0.0.5 - 2025-03-14
+
+### What's Changed
+
+* Bump dependabot/fetch-metadata from 2.2.0 to 2.3.0 by @dependabot in https://github.com/fuelviews/laravel-redirect-if-not-found/pull/7
+
+### New Contributors
+
+* @dependabot made their first contribution in https://github.com/fuelviews/laravel-redirect-if-not-found/pull/7
+
+**Full Changelog**: https://github.com/fuelviews/laravel-redirect-if-not-found/compare/v0.0.2...v0.0.5
+
 ## v0.0.4 - 2025-01-28
 
 ### What's Changed
