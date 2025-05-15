@@ -11,6 +11,6 @@ class RedirectIfNotFound extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return \Fuelviews\RedirectIfNotFound\RedirectIfNotFound::class;
+        return __CLASS__;
     }
 }

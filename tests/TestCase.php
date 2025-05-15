@@ -8,12 +8,13 @@ use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {
+    #[\Override]
     protected function setUp(): void
     {
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Fuelviews\\RedirectIfNotFound\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName): string => 'Fuelviews\\RedirectIfNotFound\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 
@@ -24,7 +25,7 @@ class TestCase extends Orchestra
         ];
     }
 
-    public function getEnvironmentSetUp($app)
+    protected function getEnvironmentSetUp($app)
     {
         config()->set('database.default', 'testing');
 
@@ -32,5 +33,10 @@ class TestCase extends Orchestra
         $migration = include __DIR__.'/../database/migrations/create_app-redirect-if-not-found_table.php.stub';
         $migration->up();
         */
+
+        // Define routes for testing
+        $app['router']->get('home', function () {
+            return 'Home Page';
+        })->name('home');
     }
 }

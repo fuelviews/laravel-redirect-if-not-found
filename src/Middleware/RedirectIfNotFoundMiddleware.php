@@ -45,8 +45,8 @@ class RedirectIfNotFoundMiddleware
             'admin/*', 'dashboard/admin/*', 'livewire/*', 'api/*', 'glide/*',
         ]);
 
-        foreach ($excludedPatterns as $pattern) {
-            if ($request->is($pattern)) {
+        foreach ($excludedPatterns as $excludedPattern) {
+            if ($request->is($excludedPattern)) {
                 return true;
             }
         }

@@ -12,7 +12,7 @@ All notable changes to `laravel-redirect-if-not-found` will be documented in thi
 
 * @dependabot made their first contribution in https://github.com/fuelviews/laravel-redirect-if-not-found/pull/7
 
-**Full Changelog**: https://github.com/fuelviews/laravel-redirect-if-not-found/compare/v0.0.2...v0.0.5
+**Full Changelog**: https://github.com/fuelviews/laravel-redirect-if-not-found/compare/v0.0.4...v0.0.5
 
 ## v0.0.4 - 2025-01-28
 
@@ -20,7 +20,7 @@ All notable changes to `laravel-redirect-if-not-found` will be documented in thi
 
 * feat: add automatic middleware registration, add configuration enhancements by @thejmitchener in https://github.com/fuelviews/laravel-redirect-if-not-found/pull/6
 
-**Full Changelog**: https://github.com/fuelviews/laravel-redirect-if-not-found/compare/v0.0.2...v0.0.4
+**Full Changelog**: https://github.com/fuelviews/laravel-redirect-if-not-found/compare/v0.0.3...v0.0.4
 
 ## v0.0.3 - 2025-01-26
 
