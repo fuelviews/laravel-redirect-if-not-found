@@ -2,7 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/fuelviews/laravel-redirect-if-not-found.svg?style=flat-square)](https://packagist.org/packages/fuelviews/laravel-redirect-if-not-found)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/fuelviews/laravel-redirect-if-not-found/run-tests.yml?label=tests&style=flat-square)](https://github.com/fuelviews/laravel-redirect-if-not-found/actions/workflows/run-tests.yml)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/fuelviews/laravel-redirect-if-not-found/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/fuelviews/laravel-redirect-if-not-found/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/fuelviews/laravel-redirect-if-not-found/php-cs-fixer.yml?label=code%20style&style=flat-square)](https://github.com/fuelviews/laravel-redirect-if-not-found/actions/workflows/php-cs-fixer.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/fuelviews/laravel-redirect-if-not-found.svg?style=flat-square)](https://packagist.org/packages/fuelviews/laravel-redirect-if-not-found)
 
 ## Installation
