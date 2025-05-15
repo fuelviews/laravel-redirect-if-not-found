@@ -14,7 +14,7 @@ class RedirectIfNotFoundServiceProvider extends PackageServiceProvider
     {
         $package
             ->name('redirect-if-not-found')
-            ->hasConfigFile();
+            ->hasConfigFile('redirect-if-not-found');
     }
 
     /**
